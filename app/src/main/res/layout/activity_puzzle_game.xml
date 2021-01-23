@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.swust.zhengxin.puzzle.Gaming.MainMenu">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:layout_centerHorizontal="true"
+            android:background="#009688"
+            android:id="@+id/GameTitle"
+            >
+
+            <ImageView
+                android:id="@+id/iv_GameBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/abc_vector_test" />
+
+           <LinearLayout
+               android:layout_marginLeft="15dp"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center_vertical"
+               android:layout_weight="2"
+               >
+
+               <TextView
+                   android:layout_marginLeft="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Time"
+                   android:textSize="15dp"
+                   android:layout_weight="1"
+                   android:gravity="fill_vertical"
+                   android:padding="5dp"/>
+
+               <Chronometer
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="fill_vertical"
+                   android:format="%s"
+                   android:id="@+id/timer"
+                   android:layout_weight="1"
+                   android:layout_gravity="center"
+                   />
+           </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ib_pause"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/pause_icon" />
+
+
+            <ImageView
+                android:id="@+id/iv_GameMenu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_menu_sort_by_size" />
+        </LinearLayout>
+
+        <com.swust.zhengxin.puzzle.UI.PuzzleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/puzzleView"
+            android:layout_below="@id/GameTitle"
+            android:layout_marginTop="50dp"
+            />
+
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/iv_CurIma"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/puzzleView"
+            android:layout_toRightOf="@id/iv_CurIma"
+            android:layout_margin="5dp"
+            android:id="@+id/FunctionBlock"
+
+            >
+
+            <LinearLayout
+
+                android:id="@+id/ll_Btn"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="fill_horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape"
+                    android:text="@string/Higher"
+                    android:onClick="addLevel"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="15dp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Lower"
+                    android:onClick="reduceLevel"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/button_shape"
+                    android:textSize="15dp"/>
+
+
+            </LinearLayout>
+            <Spinner
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/Mode_Type"
+                android:padding="5dp"
+                android:id="@+id/ModeSpinner"
+                android:layout_above="@id/ll_Btn"
+                android:layout_margin="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_tvLevel"
+                android:layout_above="@id/ModeSpinner"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvLevel"
+                    android:text="0"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu"
+    android:layout_gravity="center_vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.swust.zhengxin.puzzle.Gaming.GameMenu"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Version：Puzzle v1.0"
+            android:textSize="8dp"
+            android:textColor="#adadad"
+            />
+
+<!--        <Button-->
+<!--            android:id="@+id/GameQuit_Login"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:background="@android:color/tertiary_text_light"-->
+<!--            android:text="退出登录"-->
+<!--            android:textColor="#E8F3E9"-->
+<!--            android:textSize="10dp" />-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Btns"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/GameStart"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="#EAA926"
+            android:text="开始游戏"
+            android:textColor="#DD2214"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/GameHistory"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GameStart"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="历史纪录"
+            android:textColor="#D8DFD9"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/GameSet"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GameHistory"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_green_light"
+            android:text="音乐设置"
+            android:textColor="#E6ECE6"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/GameAbout"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GameSet"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:onClick="showDialog"
+            android:text="游戏介绍"
+            android:textColor="#388e3c"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/GameQuit"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GameAbout"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_red_dark"
+            android:onClick="ShowDialog"
+            android:text="退出游戏"
+            android:textColor="#E1ECE2"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GameQuit"
+            android:id="@+id/iv_Camera"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

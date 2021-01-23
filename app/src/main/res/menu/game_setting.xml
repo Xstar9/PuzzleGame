@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/turn_on"
+        android:title="音乐开"></item>
+    <item android:id="@+id/turn_off"
+        android:title="音乐关"></item>
+    <item android:id="@+id/default_set"
+        android:title="默认设置"></item>
+</menu>

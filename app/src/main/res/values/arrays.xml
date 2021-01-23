@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="Mode_Type">
+        <item>@string/Normal_Mode</item>
+        <item>@string/Hard_Mode</item>
+        <item>@string/Easy_Mode</item>
+    </string-array>
+</resources>

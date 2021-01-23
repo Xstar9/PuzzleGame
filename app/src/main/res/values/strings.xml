@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Puzzle</string>
+    <string name="Hard_Mode">专家模式</string>
+    <string name="Normal_Mode">普通模式</string>
+    <string name="Easy_Mode">简单模式</string>
+    <string name="Higher">增加难度</string>
+    <string name="Lower">降低难度</string>
+    <string name="Highest">已经最高难度咯</string>
+    <string name="Lowest">已经最低难度咯</string>
+    <string name="success">成功！</string>
+    <string name="success_description">Well Done！继续游戏？</string>
+    <string name="next_level">下一阶级</string>
+    <string name="cancel">取消</string>
+    <string name="Quit">是否退出游戏？</string>
+    <string name="yes">是的呀</string>
+    <string name="no">点错了</string>
+</resources>

@@ -1,0 +1,262 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.swust.zhengxin.puzzle {
+    class com.swust.zhengxin.puzzle.BuildConfig {
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Data {
+      class com.swust.zhengxin.puzzle.Data.HistoryData {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Data {
+      class com.swust.zhengxin.puzzle.Data.HistoryDataManager {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Data {
+      class com.swust.zhengxin.puzzle.Data.UsersData {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Data {
+      class com.swust.zhengxin.puzzle.Data.UsersDataManager {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Dialog {
+      class com.swust.zhengxin.puzzle.Dialog.SelectDialog {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Dialog {
+      class com.swust.zhengxin.puzzle.Dialog.SuccessDialog {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Game {
+      interface com.swust.zhengxin.puzzle.Game.Game {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Game {
+      class com.swust.zhengxin.puzzle.Game.GameAction {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Gaming {
+      class com.swust.zhengxin.puzzle.Gaming.BackgroundMusic {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Gaming {
+      class com.swust.zhengxin.puzzle.Gaming.GameHistory {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Gaming {
+      class com.swust.zhengxin.puzzle.Gaming.GameMenu {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Gaming {
+      class com.swust.zhengxin.puzzle.Gaming.MainMenu {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace History {
+      class com.swust.zhengxin.puzzle.History.ChildFragment {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace History {
+      class com.swust.zhengxin.puzzle.History.Content {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace History {
+      class com.swust.zhengxin.puzzle.History.HistoryList {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace History {
+      class com.swust.zhengxin.puzzle.History.MyListViewAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace History {
+      class com.swust.zhengxin.puzzle.History.TabNavitationLayout {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace History {
+      class com.swust.zhengxin.puzzle.History.ViewPagerAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Login_Register {
+      class com.swust.zhengxin.puzzle.Login_Register.Login {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Login_Register {
+      class com.swust.zhengxin.puzzle.Login_Register.Register {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Login_Register {
+      class com.swust.zhengxin.puzzle.Login_Register.ResetPassWord {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Module {
+      class com.swust.zhengxin.puzzle.Module.ImagePiece {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Module {
+      class com.swust.zhengxin.puzzle.Module.ImageSource {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace UI {
+      class com.swust.zhengxin.puzzle.UI.PuzzleView {
+      }
+    }
+  }
+  
+
+  namespace com.swust.zhengxin.puzzle {
+    namespace Utils {
+      class com.swust.zhengxin.puzzle.Utils.Utils {
+      }
+    }
+  }
+  
+
+  com.swust.zhengxin.puzzle.Data.HistoryDataManager o-- com.swust.zhengxin.puzzle.Data.HistoryDataManager.HistoryDBHelper : historyDBHelper
+  com.swust.zhengxin.puzzle.Data.UsersDataManager o-- com.swust.zhengxin.puzzle.Data.UsersDataManager.DataBaseManagementHelper : mDatabaseHelper
+  com.swust.zhengxin.puzzle.Dialog.SelectDialog -up-|> androidx.fragment.app.DialogFragment
+  com.swust.zhengxin.puzzle.Dialog.SelectDialog o-- com.swust.zhengxin.puzzle.Dialog.SelectDialog.ImageListAdapter : imageListAdapter
+  com.swust.zhengxin.puzzle.Dialog.SelectDialog o-- com.swust.zhengxin.puzzle.Dialog.SelectDialog.OnItemClickListener : itemClickListener
+  com.swust.zhengxin.puzzle.Dialog.SuccessDialog -up-|> android.app.DialogFragment
+  com.swust.zhengxin.puzzle.Dialog.SuccessDialog o-- com.swust.zhengxin.puzzle.Dialog.SuccessDialog.OnButtonClickListener : buttonClickListener
+  com.swust.zhengxin.puzzle.Game.GameAction .up.|> com.swust.zhengxin.puzzle.Game.Game
+  com.swust.zhengxin.puzzle.Game.GameAction .up.|> com.swust.zhengxin.puzzle.UI.PuzzleView.SuccessListener
+  com.swust.zhengxin.puzzle.Game.GameAction o-- com.swust.zhengxin.puzzle.Game.GameAction.GameStateListener : gameStateListener
+  com.swust.zhengxin.puzzle.Game.GameAction o-- com.swust.zhengxin.puzzle.UI.PuzzleView : puzzleView
+  com.swust.zhengxin.puzzle.Gaming.BackgroundMusic -up-|> android.app.Service
+  com.swust.zhengxin.puzzle.Gaming.GameHistory -up-|> androidx.fragment.app.FragmentActivity
+  com.swust.zhengxin.puzzle.Gaming.GameHistory o-- com.swust.zhengxin.puzzle.History.TabNavitationLayout : tabNavitationLayout
+  com.swust.zhengxin.puzzle.Gaming.GameHistory o-- com.swust.zhengxin.puzzle.History.ViewPagerAdapter : viewPagerAdapter
+  com.swust.zhengxin.puzzle.Gaming.GameMenu -up-|> androidx.appcompat.app.AppCompatActivity
+  com.swust.zhengxin.puzzle.Gaming.GameMenu o-- com.swust.zhengxin.puzzle.Data.UsersDataManager : mUserDataManager
+  com.swust.zhengxin.puzzle.Gaming.GameMenu o-- com.swust.zhengxin.puzzle.Dialog.SelectDialog : selectImageDialog
+  com.swust.zhengxin.puzzle.Gaming.MainMenu .up.|> com.swust.zhengxin.puzzle.Game.GameAction.GameStateListener
+  com.swust.zhengxin.puzzle.Gaming.MainMenu -up-|> androidx.appcompat.app.AppCompatActivity
+  com.swust.zhengxin.puzzle.Gaming.MainMenu o-- com.swust.zhengxin.puzzle.Data.HistoryDataManager : historyDataManager
+  com.swust.zhengxin.puzzle.Gaming.MainMenu o-- com.swust.zhengxin.puzzle.Game.GameAction : puzzleGame
+  com.swust.zhengxin.puzzle.Gaming.MainMenu o-- com.swust.zhengxin.puzzle.UI.PuzzleView : puzzleLayout
+  com.swust.zhengxin.puzzle.Gaming.MainMenu o-- com.swust.zhengxin.puzzle.Dialog.SelectDialog : selectImageDialog
+  com.swust.zhengxin.puzzle.Gaming.MainMenu o-- com.swust.zhengxin.puzzle.Data.UsersDataManager : userDataManager
+  com.swust.zhengxin.puzzle.History.ChildFragment -up-|> androidx.fragment.app.Fragment
+  com.swust.zhengxin.puzzle.History.ChildFragment o-- com.swust.zhengxin.puzzle.History.MyListViewAdapter : adapter
+  com.swust.zhengxin.puzzle.History.ChildFragment o-- com.swust.zhengxin.puzzle.Data.HistoryDataManager : historyDataManager
+  com.swust.zhengxin.puzzle.History.MyListViewAdapter -up-|> android.widget.BaseAdapter
+  com.swust.zhengxin.puzzle.History.TabNavitationLayout -up-|> android.widget.RelativeLayout
+  com.swust.zhengxin.puzzle.History.TabNavitationLayout o-- com.swust.zhengxin.puzzle.History.TabNavitationLayout.OnNaPageChangeListener : onNaPageChangeListener
+  com.swust.zhengxin.puzzle.History.TabNavitationLayout o-- com.swust.zhengxin.puzzle.History.TabNavitationLayout.OnTitleClickListener : onTitleClickListener
+  com.swust.zhengxin.puzzle.History.ViewPagerAdapter -up-|> androidx.fragment.app.FragmentPagerAdapter
+  com.swust.zhengxin.puzzle.Login_Register.Login -up-|> android.app.Activity
+  com.swust.zhengxin.puzzle.Login_Register.Login o-- com.swust.zhengxin.puzzle.Data.UsersDataManager : mUserDataManager
+  com.swust.zhengxin.puzzle.Login_Register.Register -up-|> androidx.appcompat.app.AppCompatActivity
+  com.swust.zhengxin.puzzle.Login_Register.Register o-- com.swust.zhengxin.puzzle.Data.UsersDataManager : mUsersDataManager
+  com.swust.zhengxin.puzzle.Login_Register.ResetPassWord -up-|> androidx.appcompat.app.AppCompatActivity
+  com.swust.zhengxin.puzzle.Login_Register.ResetPassWord o-- com.swust.zhengxin.puzzle.Data.UsersDataManager : mUsersDataManager
+  com.swust.zhengxin.puzzle.UI.PuzzleView .up.|> android.view.View.OnClickListener
+  com.swust.zhengxin.puzzle.UI.PuzzleView -up-|> android.widget.FrameLayout
+  com.swust.zhengxin.puzzle.UI.PuzzleView o-- com.swust.zhengxin.puzzle.UI.PuzzleView.SuccessListener : mSuccessListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
